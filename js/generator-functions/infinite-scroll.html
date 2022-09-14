@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="content">
+  </div>
+  <h1 id="loader">Loading...</h1>
+  <script>
+    const hideLoader = () => {
+      document.getElementById('loader').style.display = 'none';
+    };
+
+    const showLoader = () => {
+      document.getElementById('loader').style.display = 'block';
+    };
+
+    const contentGeneratorFunc = function*(){
+      let endpoint = `https://api.javascripttutorial.net/v1/quotes/`;
+      let page = 1;
+      let limit = 10;
+
+      while (true) {
+        (async function(){
+          showLoader();
+
+          const response = await fetch(`${endpoint}?_page=${page}&_limit=${limit}`);
+          const {total, data} = await response.json();
+
+          data.forEach(quote => {
+            const div = document.createElement('div');
+            div.innerHTML = `<p>${quote.quote}</p><p>${quote.author}</p>`;
+            document.getElementById('content').appendChild(div);
+          });
+
+          hideLoader();
+
+          if (page * limit >= total) {
+            page = 1;
+          } else {
+            page++;
+          }
+    
+        })();
+
+        yield page;
+      }
+    }
+
+    const contentGenerator = contentGeneratorFunc();
+    for (let i = 0; i < 10; i++) {
+      contentGenerator.next();
+    }
+
+    window.addEventListener('scroll', () => {
+      const {
+        scrollTop,
+        scrollHeight,
+        clientHeight
+      } = document.documentElement;
+
+    if (scrollTop + clientHeight >= scrollHeight - 5) {
+      contentGenerator.next();
+    }
+  });
+
+  </script>
+</body>
+</html>
