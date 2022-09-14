@@ -1,3 +1,11 @@
+# setTimeout
+The setTimeout( ) allows us to execute a function after a minimum delay.
+
+### Why would you call setTimeout(()=>{...}, 0)
+We often call setTimeout with zero delay to defer its execution until call stack is clear.  
+For a practical example see `print_arr_recursive.js`
+
+```javascript
 // Recursive function to print an array
 // Bad function: will cause stack overflow for large arrays
 function printArr(arr, startIndex) {
@@ -23,4 +31,4 @@ function printArr(arr, startIndex) {
  arr.fill(0);
  // printArr(arr, 0); // will cause stack overflow
  printArrOptimized(arr, 0); // will not cause stack overflow
- 
+```

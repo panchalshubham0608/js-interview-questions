@@ -1,3 +1,9 @@
+# Class vs Function Constructor
+Both class and function constructors are used to create objects. The difference comes when we use inheritance. In case of function constructors we have to manually define the prototype for children whereas it’s not the case with classes.
+
+
+#### Inheritance with function constructors
+```javascript
 // The way inheritance works in JavaScript with function constructors
 function Person(name) {
     this.name = name;
@@ -43,3 +49,30 @@ Student.prototype.sayBye = function () {
 }
 new Student("Alice", 1234).sayBye();
 // new Person("Bob").sayBye(); // TypeError: s1.sayBye is not a function
+```
+
+#### Inheritance with classes
+```javascript
+class Person {
+    constructor(name) {
+        this.name = name;
+    }
+}
+
+class Student extends Person {
+    constructor(name, studentId) {
+        super(name);
+        this.studentId = studentId;
+    }
+}
+
+Student.prototype.sayHello = function () {
+    console.log(`Hello, my name is ${this.name} and my student ID is ${this.studentId}`);
+}
+
+const student = new Student('John', 123);
+console.log(student);
+student.sayHello();
+
+// new Person('John').sayHello(); // TypeError: (intermediate value).sayHello is not a function
+```
