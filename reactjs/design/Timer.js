@@ -1,3 +1,4 @@
+// Design a timer that can start, pause/resume & reset
 import React, { useState } from 'react';
 
 function App() {
