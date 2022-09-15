@@ -1,6 +1,6 @@
 ## What is the use of useCallback hook in React?
 Short Answer:
-It’s used to create memoized callbacks which change only when one of the dependencies changes. This is useful to prevent a child component from unnecessary re-rendering based on referential equality.
+It’s used to create memoized callbacks which change only when one of the dependencies changes. This is useful to prevent a child component from unnecessary re-rendering based on `referential equality`.
 
 Long Answer:
 When a component re-renders, every function inside of the component is recreated and therefore these function’s reference changes. And now if they are passed to the child component as props, the child component will re-render because its props have changed.
