@@ -6,8 +6,8 @@ There are mainly three types of design patterns:
 1. **Creational**: These design patterns are all about class instantiation or object creation e.g. _Factory Method, Abstract Factory, Builder, Singleton, Object Pool, and Prototype._
    * _class-creation patterns_: use inheritance effectively.
    * _object-creation patterns_: use delegation effectively.   
-2. **Structural**: These design patterns are about organizing different classes and objects to form larger structures and provide new functionality e.g. _Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Private Class Data, and Proxy_
-3. **Behavioral**: These design patterns are about identifying common communication patterns between objects and realizing these patterns e.g. _Chain of responsibility, Command, Interpreter, Iterator, Mediator, Memento, Null Object, Observer, State, Strategy, Template method, Visitor_
+2. **Structural**: These design patterns are about organizing different classes and objects to form larger structures and provide new functionality. With structural patterns, you can add functionalities to objects so that restructuring some parts of the system does not affect the rest. e.g. _Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Private Class Data, and Proxy_
+3. **Behavioral**: These design patterns are about identifying common communication patterns between objects and realizing these patterns. In short, behavioral design patterns are concerns with the responsibilities between objects by outlining the patterns for communication between objects. e.g. _Chain of responsibility, Command, Interpreter, Iterator, Mediator, Memento, Null Object, Observer, State, Strategy, Template method, Visitor_
 
 Reference: [https://www.geeksforgeeks.org/design-patterns-set-1-introduction/](https://www.geeksforgeeks.org/design-patterns-set-1-introduction/)
 
