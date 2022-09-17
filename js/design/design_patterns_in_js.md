@@ -73,3 +73,6 @@ This design pattern provides a simplified interface to a library, a framework, o
 **Flyweight Pattern**  
 This pattern is used to reduce the memory usage or computational expenses by sharing as much as possible with similar objects.  
 
+**Proxy Pattern**  
+This design pattern provides an object that acts as a substitute for a real service object used by a client. A proxy is a class that functions as an interface to a particular resource. That resource may be remote, expensive to construct, or may require logging or some other added functionality.  
+
