@@ -26,13 +26,15 @@ Design patterns are typically split into three categories:
 Builder pattern is used to create complex objects with constituent parts that must be created in the same order or using a specific algorithm.  
 - A builder is a separate component for building an object.
 - We can either give builder an initializer or return it via static function.
-- To make builder fluent, _return self_
+- To make builder fluent, _return this_
 - Different facets of an object can be built with different builders working in tandem via a base class.  
 
 **Factory Pattern**  
 The factory pattern is used to replace class constructors, abstracting the process of object generation so that the type of the object instantiated can be determined at run-time. In short, the factory pattern is used to create objects without having to specify the exact class of the object that will be created.  
 
 **Abstract Factory Pattern**   
-Abstract Factory Pattern is a creational design pattern that lets you produce families of related objects without specifying their concrete classes. Here you create a factory for each item and put all factories in a single (AbstractFactory).  
+Abstract Factory Pattern is a creational design pattern that lets you produce families of related objects without specifying their concrete classes. Here you create a factory for each item and put all factories in a single class (AbstractFactory - factory of factories).  
 
+**Prototype Pattern**  
+The prototype pattern is used to instantiate a new object by copying all of the properties of an existing object creating an independent clone. This practise is particularly useful when the construction of a new object is inefficient.  
 
