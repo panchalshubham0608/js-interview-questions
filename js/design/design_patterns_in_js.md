@@ -44,3 +44,19 @@ The Singleton Pattern is a design pattern that restricts the instantiation of a 
 ### Structural Design Pattern
 **Adapter Pattern**
 The Adapter Pattern allows objects with incompatible interfaces to collaborate. The Adapter pattern converts the interface of a class into another interface the clients expect. Adapter lets classes work together that couldn't otherwise because of incompatible interfaces. The Adapter pattern is often used to make existing classes work with others without modifying their source code.  
+
+**Bridge Pattern**  
+The Bridge Pattern lets you split a large class or a set of closely related classes into two separate hierarchies-abstraction and implementation—which can be developed independently of each other. The Bridge pattern is often used when you need to extend a class in several orthogonal (independent) dimensions. In such cases, the class inheritance hierarchy becomes impractical, and the alternative is to compose the class from separate parts.  
+The Bridge pattern prevents a `Cartesian product` complexity explosion. For example suppose you have a base class _ThreadScheduler_ which can be preemptive or cooperative. Further it can run on Window or Unix. Now you have a 2x2 scenario: WindowsPTS, UnixPTP, WindowsCTS, UnixCTS.  
+![Before](./images/bridge_pattern_3.png)
+```
+                / Preemptive
+ThreadSchduler
+                \ Cooperative
+|
+| (Bridge - composition)
+|
+                    / Windows
+PlatformScheduler
+                    \ Unix
+```
