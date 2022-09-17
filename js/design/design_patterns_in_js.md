@@ -38,3 +38,9 @@ Abstract Factory Pattern is a creational design pattern that lets you produce fa
 **Prototype Pattern**  
 The prototype pattern is used to instantiate a new object by copying all of the properties of an existing object creating an independent clone. This practise is particularly useful when the construction of a new object is inefficient.  
 
+**Singleton Pattern**  
+The Singleton Pattern is a design pattern that restricts the instantiation of a class to one object. The Singleton Pattern is used in situations where it is important to have only one instance of a class and where creation of object is expensive for example a database connection.  
+
+### Structural Design Pattern
+**Adapter Pattern**
+The Adapter Pattern allows objects with incompatible interfaces to collaborate. The Adapter pattern converts the interface of a class into another interface the clients expect. Adapter lets classes work together that couldn't otherwise because of incompatible interfaces. The Adapter pattern is often used to make existing classes work with others without modifying their source code.  
