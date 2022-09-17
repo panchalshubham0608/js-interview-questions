@@ -60,3 +60,16 @@ ThreadSchduler
 PlatformScheduler
                     \ Unix
 ```
+
+**Composite Pattern**  
+This design pattern lets you compose objects into tree structures and then work with these structures as if they were individual objects. In other words, composite design pattern let us treat both types of objects (singular or multi-valued) uniformly.  
+
+**Decorator Pattern**  
+The decorator pattern lets you add new behaviors to objects by placing these objects inside special wrapper objects that contain the behaviors. In other words, this pattern facilitates the addition of behaviors to individual objects without inheriting from them.  
+
+**Facade Pattern**  
+This design pattern provides a simplified interface to a library, a framework, or any other complex set of classes.  
+
+**Flyweight Pattern**  
+This pattern is used to reduce the memory usage or computational expenses by sharing as much as possible with similar objects.  
+
