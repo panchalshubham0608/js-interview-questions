@@ -76,3 +76,6 @@ This pattern is used to reduce the memory usage or computational expenses by sha
 **Proxy Pattern**  
 This design pattern provides an object that acts as a substitute for a real service object used by a client. A proxy is a class that functions as an interface to a particular resource. That resource may be remote, expensive to construct, or may require logging or some other added functionality.  
 
+### Bheavioral Design Patterns  
+**Chain of Responsibility Pattern**  
+This design pattern allows passing a request along a chain of potential handlers until one of them handles it.   
